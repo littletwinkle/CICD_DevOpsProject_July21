@@ -1,0 +1,12 @@
+version: 0.2
+phases:
+  build:
+    commands:
+      - echo "Starting build phase for static website..."
+      - echo "No complex build steps required. Files are ready."
+artifacts:
+  files:
+    - WEBPAGE.HTML
+    - css/style.CSS
+  discard-paths: no
+    # This means "include all files and directories from the current working directory"
