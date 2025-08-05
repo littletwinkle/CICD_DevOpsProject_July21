@@ -1,12 +1,17 @@
 version: 0.2
+
 phases:
   build:
     commands:
-      - echo "Starting build phase for static website..."
-      - echo "No complex build steps required. Files are ready."
+      - echo "Packaging static HTML files..."
+      - mkdir -p output
+      - cp -r *.html output/
+      - cp -r *.css output/
+	  - cp -r *.png output/
+      # If you have CSS/JS/images in 'assets' folder
+
 artifacts:
   files:
-    - WEBPAGE.HTML
-    - css/style.CSS
-  discard-paths: no
-    # This means "include all files and directories from the current working directory"
+    - '**/*'
+  base-directory: output
+  name: static-website.zip
