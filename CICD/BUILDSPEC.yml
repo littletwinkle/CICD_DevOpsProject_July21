@@ -7,7 +7,7 @@ phases:
       - mkdir -p output
       - cp -r *.html output/
       - cp -r *.css output/
-	  - cp -r *.png output/
+      - cp -r *.png output/
       # If you have CSS/JS/images in 'assets' folder
 
 artifacts:
