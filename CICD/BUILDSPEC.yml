@@ -5,9 +5,9 @@ phases:
     commands:
       - echo "Packaging static HTML files..."
       - mkdir -p output
-      - cp -r *.HTML output/
-      - cp -r *.CSS output/
-      - cp -r *.PNG output/
+      - cp -r CICD/*.HTML output/
+      - cp -r CICD/*.CSS output/
+      - cp -r CICD/*.PNG output/
       # If you have CSS/JS/images in 'assets' folder
 
 artifacts:
