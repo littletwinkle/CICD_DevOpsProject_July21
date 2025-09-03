@@ -5,9 +5,11 @@ phases:
     commands:
       - echo "Packaging static HTML files..."
       - mkdir -p output
+      - shopt -s nocaseglob
       - cp -r *.html output/
       - cp -r *.css output/
       - cp -r *.png output/
+      - shopt -u nocaseglob
       # If you have CSS/JS/images in 'assets' folder
 
 artifacts:
