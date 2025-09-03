@@ -3,14 +3,12 @@ version: 0.2
 phases:
   build:
     commands:
-      - echo "Packaging static HTML files..."
+      - echo "Packaging static HTML files (case-insensitive)..."
       - mkdir -p output
-      - shopt -s nocaseglob
-      - cp -r *.html output/
-      - cp -r *.css output/
-      - cp -r *.png output/
-      - shopt -u nocaseglob
-      # If you have CSS/JS/images in 'assets' folder
+      - find . -iname "*.html" -exec cp {} output/ \;
+      - find . -iname "*.css" -exec cp {} output/ \;
+      - find . -iname "*.png" -exec cp {} output/ \;
+      #If you have CSS/JS/images in 'assets' folder
 
 artifacts:
   files:
@@ -19,5 +17,6 @@ artifacts:
   name: static-website.zip
   post_build:
     commands:
-        - mv output/WEBPAGE.HTML output/index.html
+        - file=$(find output -iname "webpage.html")
+        - if [ -n "$file" ]; then mv "$file" output/index.html; fi
 
