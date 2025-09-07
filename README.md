@@ -1,7 +1,8 @@
-CICD DEVOPSPROJECT JULY21Static Website CI/CD Pipeline with AWS
+CICD DEVOPSPROJECT JULY21
+Static Website CI/CD Pipeline with AWS
 This repository contains the source code for a static website and the full infrastructure-as-code (IaC) for a robust Continuous Integration/Continuous Deployment (CI/CD) pipeline on AWS. The pipeline automates the process of building and deploying the website from a GitHub push, ensuring a seamless and efficient workflow.
 
-Key Technologies
+Key Technologies:
 GitHub: Source code repository and trigger for the CI/CD pipeline.
 
 AWS CodePipeline: Orchestrates the end-to-end delivery process, from source to deployment.
