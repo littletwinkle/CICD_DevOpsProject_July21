@@ -11,7 +11,7 @@ phases:
       - find . -iname "*.css" -exec cp {} output/ \;
       - find . -iname "*.js" -exec cp {} output/ \;
       #- find . -iname "*.png" -exec cp {} output/ \;
-      - [ -d assets ] && cp -r assets/ output/ || echo "No assets folder found"
+      - "[ -d assets ] && cp -r assets/ output/ || echo 'No assets folder found'"
   post_build:
     commands:
       - file=$(find output -iname "webpage.html")
