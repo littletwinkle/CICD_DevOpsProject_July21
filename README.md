@@ -1,9 +1,19 @@
+
 **CICD DEVOPSPROJECT JULY21**
 **Static Website CI/CD Pipeline with AWS**
 This repository contains the source code for a static website and the full infrastructure-as-code (IaC) for a robust Continuous Integration/Continuous Deployment (CI/CD) pipeline on AWS. The pipeline automates the process of building and deploying the website from a GitHub push, ensuring a seamless and efficient workflow.
 
 **Key Technologies:**
 * GitHub: Source code repository and trigger for the CI/CD pipeline.
+
+CICD DEVOPSPROJECT JULY21
+
+<u>Static Website CI/CD Pipeline with AWS</u>
+
+This repository contains the source code for a static website and the full infrastructure-as-code (IaC) for a robust Continuous Integration/Continuous Deployment (CI/CD) pipeline on AWS. The pipeline automates the process of building and deploying the website from a GitHub push, ensuring a seamless and efficient workflow.
+
+<u>Key Technologies</u>
+GitHub: Source code repository and trigger for the CI/CD pipeline.
 
 * AWS CodePipeline: Orchestrates the end-to-end delivery process, from source to deployment.
 
@@ -13,10 +23,14 @@ This repository contains the source code for a static website and the full infra
 
 * k6: An open-source load testing tool integrated into the build process to verify application performance.
 
+
 **Architecture and Workflow**
 The CI/CD pipeline is designed to be fully automated and event-driven.
 
 1. Source: A code push to the main branch of this GitHub repository triggers the CodePipeline.
+
+<u>Architecture and Workflow</u>
+The CI/CD pipeline is designed to be fully automated and event-drivA code push to the main branch of this GitHub repository triggers the CodePipeline.
 
 2. Build: CodePipeline initiates an AWS CodeBuild project. CodeBuild executes the instructions in the buildspec.yml file to prepare the application for deployment.
 
