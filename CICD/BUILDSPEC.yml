@@ -17,7 +17,7 @@ phases:
       - file=$(find output -iname "webpage.html")
       - if [ -n "$file" ] && [ ! -f output/index.html ]; then mv "$file" output/index.html; fi
       - echo "Backing up current S3 contents..."
-      - aws s3 sync s3://$HOST_BUCKET s3://$HOST_BUCKET-backup/$(date +%Y%m%d-%H%M%S)
+      - aws s3 sync s3://$HOST_BUCKET/ s3://$HOST_BUCKET-backup/backup-$(date +%Y%m%d-%H%M%S)/
       - echo "Syncing new content with --delete..."
       - aws s3 sync output/ s3://$HOST_BUCKET --delete
       - echo "Sync completed at $(date)" >> sync.log
